@@ -29,10 +29,6 @@ http {
     server {
         listen 3579 default_server;
 
-        allow 172.30.32.2;
-        allow 127.0.0.1;
-        deny all;
-
         proxy_buffering off;
         proxy_request_buffering off;
         proxy_http_version 1.1;
