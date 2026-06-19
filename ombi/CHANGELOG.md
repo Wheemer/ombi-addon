@@ -9,7 +9,7 @@
 
 - Restructured the fork as a normal single-add-on repository with Ombi at `ombi/`.
 - Added Home Assistant ingress support by setting Ombi's `BASE_URL` from the Supervisor ingress path.
-- Published forked images under `ghcr.io/wheemer/ombi-{arch}`.
+- Published images under `ghcr.io/wheemer/ombi-addon-{arch}`.
 - Restored Ombi `icon.png` and `logo.png` so Home Assistant shows the right branding.
 - Removed broad device passthrough and the old custom AppArmor profile.
 - Removed obsolete/deprecated warnings from the active fork metadata.

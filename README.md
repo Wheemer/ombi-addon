@@ -18,7 +18,7 @@ This repository packages Ombi as a Home Assistant add-on with ingress support. I
 |---------|:------:|
 | Build | [![Builder](https://github.com/Wheemer/ombi-addon/actions/workflows/onpush_builder.yaml/badge.svg)](https://github.com/Wheemer/ombi-addon/actions/workflows/onpush_builder.yaml) |
 | Update | [![Update Ombi](https://github.com/Wheemer/ombi-addon/actions/workflows/update_ombi.yaml/badge.svg)](https://github.com/Wheemer/ombi-addon/actions/workflows/update_ombi.yaml) |
-| Image | `ghcr.io/wheemer/ombi-{arch}` |
+| Image | `ghcr.io/wheemer/ombi-addon-{arch}` |
 
 # Feature Requests
 
@@ -101,8 +101,8 @@ The scheduled update workflow checks `Ombi-app/Ombi` prereleases and bumps the a
 
 Published images:
 
-* `ghcr.io/wheemer/ombi-amd64`
-* `ghcr.io/wheemer/ombi-aarch64`
+* `ghcr.io/wheemer/ombi-addon-amd64`
+* `ghcr.io/wheemer/ombi-addon-aarch64`
 
 # Links
 

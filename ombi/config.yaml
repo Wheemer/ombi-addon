@@ -3,7 +3,7 @@ arch:
   - amd64
 description:
   Self-hosted Plex, Emby, and Jellyfin request and user management system
-image: ghcr.io/wheemer/ombi-{arch}
+image: ghcr.io/wheemer/ombi-addon-{arch}
 ingress: true
 ingress_port: 3579
 ingress_stream: true
