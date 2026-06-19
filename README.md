@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="[[https://raw.githubusercontent.com/Wheemer/ombi-app/master/ombi/logo.png](https://github.com/Wheemer/ombi-app/blob/master/ombi/ombi.png)]
+  <img src="[https://raw.githubusercontent.com/Wheemer/ombi-app/master/ombi/logo.png]
 </p>
 
 ___
