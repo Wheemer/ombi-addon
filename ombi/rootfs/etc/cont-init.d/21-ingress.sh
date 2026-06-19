@@ -14,6 +14,8 @@ if [ -z "$base_url" ]; then
     exit 0
 fi
 
+base_url="${base_url%/}/"
+
 bashio::log.info "Setting Ombi BASE_URL for Home Assistant ingress"
 
 written=false
