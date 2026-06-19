@@ -6,7 +6,6 @@ description:
 image: ghcr.io/wheemer/ombi-addon
 ingress: true
 ingress_port: 3579
-ingress_panel: true
 ingress_stream: true
 init: false
 map:
