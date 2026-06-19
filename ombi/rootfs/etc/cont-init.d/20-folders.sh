@@ -4,6 +4,8 @@ set -e
 
 config_dir="/config"
 legacy_dir="/homeassistant/addons_config/ombi"
+uid="$(bashio::config "PUID")"
+gid="$(bashio::config "PGID")"
 
 mkdir -p "$config_dir"
 chmod 755 "$config_dir"
@@ -17,4 +19,4 @@ if [ "${#config_files[@]}" -eq 0 ] && [ "${#legacy_files[@]}" -gt 0 ]; then
     cp -a "$legacy_dir/." "$config_dir/"
 fi
 
-chown -R "$PUID:$PGID" "$config_dir"
+chown -R "$uid:$gid" "$config_dir"
