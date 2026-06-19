@@ -21,6 +21,7 @@ This Home Assistant add-on runs Ombi with ingress support, so it can open from t
 * Opens inside Home Assistant through ingress.
 * Keeps direct local access available on port `3579`.
 * Includes Ombi icon and logo assets for Home Assistant.
+* Stores Ombi data in Home Assistant's backed-up add-on config storage.
 
 # Installation
 
@@ -44,6 +45,8 @@ After adding the repository:
 Use Ombi's setup wizard to connect Plex, Emby, or Jellyfin first. Then add Sonarr, Radarr, Lidarr, or your other request automation tools from Ombi's settings.
 
 When ingress is enabled, the add-on sets Ombi's base URL automatically from Home Assistant. Leave `ingress_disabled` set to `false` unless you want to manage Ombi's base URL yourself for direct access or a separate reverse proxy.
+
+Ombi data is stored in the add-on's own backed-up config folder. If an older install has data in `addons_config/ombi`, the add-on copies it into the new storage location when `/config` is empty.
 
 # Configuration
 

@@ -5,6 +5,7 @@
 - Updated Ombi upstream version to `4.60.6`.
 - Added a scheduled Ombi-only updater workflow.
 - Switched Home Assistant to the generic multi-arch image `ghcr.io/wheemer/ombi-addon`.
+- Moved Ombi data to Home Assistant's backed-up add-on config storage and added a legacy config copy path.
 - Removed the broken upstream preview screenshot from the README files.
 
 ## 4.55.2-6 (2026-06-19)

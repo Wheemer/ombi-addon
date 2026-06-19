@@ -2,27 +2,19 @@
 # shellcheck shell=bash
 set -e
 
-slug=ombi
-config_dir="/config/addons_config/$slug"
-legacy_dir="/config/$slug"
+config_dir="/config"
+legacy_dir="/homeassistant/addons_config/ombi"
 
-if [ ! -d "$config_dir" ]; then
+mkdir -p "$config_dir"
+chmod 755 "$config_dir"
 
-    if [ -d "$legacy_dir" ]; then
-        echo "Moving to new location $config_dir"
-        mkdir -p "$config_dir"
-        chmod 755 "$config_dir"
-        shopt -s dotglob nullglob
-        files=("$legacy_dir"/*)
-        if [ "${#files[@]}" -gt 0 ]; then
-            mv "${files[@]}" "$config_dir/"
-        fi
-        rmdir "$legacy_dir" 2>/dev/null || true
-    fi
+shopt -s dotglob nullglob
+config_files=("$config_dir"/*)
+legacy_files=("$legacy_dir"/*)
 
-    echo "Creating $config_dir"
-    mkdir -p "$config_dir"
-    chmod 755 "$config_dir"
+if [ "${#config_files[@]}" -eq 0 ] && [ "${#legacy_files[@]}" -gt 0 ]; then
+    bashio::log.info "Copying legacy Ombi config into add-on config storage"
+    cp -a "$legacy_dir/." "$config_dir/"
 fi
 
 chown -R "$PUID:$PGID" "$config_dir"

@@ -18,7 +18,7 @@ ENV DOTNET_USE_POLLING_FILE_WATCHER=1 \
 
 # Global LSIO modifications
 COPY ha_lsio.sh /ha_lsio.sh
-ARG CONFIGLOCATION="/config/addons_config/ombi"
+ARG CONFIGLOCATION="/config"
 RUN chmod 744 /ha_lsio.sh && if grep -qr "lsio" /etc; then /ha_lsio.sh "$CONFIGLOCATION"; fi && rm /ha_lsio.sh
 
 ##################

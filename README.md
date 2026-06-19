@@ -42,6 +42,7 @@ For Home Assistant add-on issues, use this repository:
 * Uses the LinuxServer.io Ombi development image.
 * Auto-updates from `Ombi-app/Ombi` prereleases to match the development image stream.
 * Includes Ombi icon and logo assets for the Home Assistant add-on store and sidebar.
+* Stores Ombi data in Home Assistant's backed-up add-on config storage.
 
 # Installation
 
@@ -65,6 +66,8 @@ After adding the repository:
 Use Ombi's setup wizard to connect Plex, Emby, or Jellyfin first. After that, add your request automation tools such as Sonarr, Radarr, or Lidarr from Ombi's settings.
 
 When ingress is enabled, the add-on sets Ombi's base URL automatically from Home Assistant. Leave `ingress_disabled` set to `false` unless you want to manage Ombi's base URL yourself for direct access or a separate reverse proxy.
+
+Ombi data is stored in the add-on's own backed-up config folder. If an older install has data in `addons_config/ombi`, the add-on copies it into the new storage location when `/config` is empty.
 
 Ombi's own installation and reverse proxy docs are here:
 

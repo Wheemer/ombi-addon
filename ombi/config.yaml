@@ -9,7 +9,8 @@ ingress_port: 3579
 ingress_stream: true
 init: false
 map:
-  - config:rw
+  - addon_config:rw
+  - homeassistant_config:ro
 name: Ombi
 options:
   env_vars: []
@@ -29,6 +30,5 @@ schema:
   PGID: int
   PUID: int
 slug: ombi
-stage: stable
 url: https://github.com/Wheemer/ombi-addon/tree/master/ombi
 version: "4.60.6-1"
