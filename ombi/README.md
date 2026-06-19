@@ -1,4 +1,6 @@
-![Ombi logo](https://ombi.io/img/logo-orange-small.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Wheemer/ombi-addon/master/ombi/logo.png" alt="Ombi logo" width="128">
+</p>
 
 ___
 

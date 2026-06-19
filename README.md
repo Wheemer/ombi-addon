@@ -1,4 +1,6 @@
-![Ombi logo](https://ombi.io/img/logo-orange-small.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Wheemer/ombi-addon/master/ombi/logo.png" alt="Ombi logo" width="128">
+</p>
 
 ___
 
@@ -100,6 +102,10 @@ Published images:
 * `ghcr.io/wheemer/ombi-addon`
 * `ghcr.io/wheemer/amd64-ombi-addon`
 * `ghcr.io/wheemer/aarch64-ombi-addon`
+
+# Social Preview
+
+Use `.github/social-preview.png` for GitHub's repository social preview image so Home Assistant forum links show Ombi branding.
 
 # Links
 

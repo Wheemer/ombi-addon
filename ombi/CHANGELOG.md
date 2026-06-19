@@ -8,6 +8,7 @@
 - Clarified the docs for Ombi's Base URL when running through Home Assistant ingress.
 - Removed the internal ingress Base URL toggle from the user-facing add-on options.
 - Fixed direct port access so published port `3579` is not blocked by the ingress proxy.
+- Switched README branding to repo-hosted images and added a GitHub social preview image for forum link previews.
 - Moved Ombi data to Home Assistant's backed-up add-on config storage and added a legacy config copy path.
 - Removed the broken upstream preview screenshot from the README files.
 
