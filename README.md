@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Wheemer/ombi-app/master/ombi/logo.png" alt="Ombi logo" width="128">
+  <img src="[https://raw.githubusercontent.com/Wheemer/ombi-app/master/ombi/logo.png](https://community-assets.home-assistant.io/original/4X/1/1/a/11a2b63a87cacdb81edc5710a7f0464529901b2c.png)" alt="Ombi logo">
 </p>
 
 ___
