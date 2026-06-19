@@ -14,9 +14,9 @@ ___
 
 Ombi is a friendly media request tool for Plex, Emby, and Jellyfin.
 
-This repository packages Ombi as a Home Assistant add-on with ingress support. It opens from the Home Assistant sidebar and also exposes Ombi on port `3579` for direct local access.
+This repository packages Ombi as a Home Assistant App with ingress support. It opens from the Home Assistant sidebar and also exposes Ombi on port `3579` for direct local access.
 
-| Service | Add-on |
+| Service | App |
 |---------|:------:|
 | Build | [![Builder](https://github.com/Wheemer/ombi-addon/actions/workflows/onpush_builder.yaml/badge.svg)](https://github.com/Wheemer/ombi-addon/actions/workflows/onpush_builder.yaml) |
 | Update | [![Update Ombi](https://github.com/Wheemer/ombi-addon/actions/workflows/update_ombi.yaml/badge.svg)](https://github.com/Wheemer/ombi-addon/actions/workflows/update_ombi.yaml) |
@@ -28,7 +28,7 @@ For Ombi application features, use the Ombi feature board:
 
 [https://features.ombi.io](https://features.ombi.io)
 
-For Home Assistant add-on issues, use this repository:
+For Home Assistant App issues, use this repository:
 
 [https://github.com/Wheemer/ombi-addon/issues](https://github.com/Wheemer/ombi-addon/issues)
 
@@ -43,8 +43,8 @@ For Home Assistant add-on issues, use this repository:
 * Builds for `amd64` and `aarch64`.
 * Uses the LinuxServer.io Ombi development image.
 * Auto-updates from `Ombi-app/Ombi` prereleases to match the development image stream.
-* Includes Ombi icon and logo assets for the Home Assistant add-on store and sidebar.
-* Stores Ombi data in Home Assistant's backed-up add-on config storage.
+* Includes Ombi icon and logo assets for the Home Assistant App store and sidebar.
+* Stores Ombi data in Home Assistant's backed-up app config storage.
 
 # Installation
 
@@ -58,18 +58,18 @@ https://github.com/Wheemer/ombi-addon
 
 After adding the repository:
 
-* Install the `Ombi` add-on.
-* Start the add-on.
-* Open Ombi from the Home Assistant sidebar or the add-on page's `Open Web UI` button.
+* Install the `Ombi` app.
+* Start the app.
+* Open Ombi from the Home Assistant sidebar or the app page's `Open Web UI` button.
 * Direct local access is available on port `3579`.
 
 # First Setup
 
 Use Ombi's setup wizard to connect Plex, Emby, or Jellyfin first. After that, add your request automation tools such as Sonarr, Radarr, or Lidarr from Ombi's settings.
 
-When ingress is enabled, the add-on sets Ombi's Base URL to Home Assistant's ingress path. In Ombi settings this looks like `/api/hassio_ingress/...`; leave it that way for sidebar access. The generic Ombi reverse-proxy instructions do not apply to Home Assistant ingress.
+When ingress is enabled, the app sets Ombi's Base URL to Home Assistant's ingress path. In Ombi settings this looks like `/api/hassio_ingress/...`; leave it that way for sidebar access. The generic Ombi reverse-proxy instructions do not apply to Home Assistant ingress.
 
-Ombi data is stored in the add-on's own backed-up config folder. If an older install has data in `addons_config/ombi`, the add-on copies it into the new storage location when `/config` is empty.
+Ombi data is stored in the app's own backed-up config folder. If an older install has data in `addons_config/ombi`, the app copies it into the new storage location when `/config` is empty.
 
 Ombi's own application docs are here:
 
@@ -93,7 +93,7 @@ env_vars: []
 
 # Updates
 
-The scheduled update workflow checks `Ombi-app/Ombi` prereleases and bumps the add-on version when Ombi changes. This follows the same stream used by the LinuxServer.io development image.
+The scheduled update workflow checks `Ombi-app/Ombi` prereleases and bumps the app version when Ombi changes. This follows the same stream used by the LinuxServer.io development image.
 
 # Images
 
@@ -112,7 +112,7 @@ Use `.github/social-preview.png` for GitHub's repository social preview image so
 * [Ombi](https://github.com/Ombi-app/Ombi)
 * [Ombi website](https://ombi.io/)
 * [LinuxServer Ombi image](https://github.com/linuxserver/docker-ombi)
-* [Original archived add-on source](https://github.com/alexbelgium/hassio-addons/tree/master/zzz_archived_ombi)
+* [Original archived app source](https://github.com/alexbelgium/hassio-addons/tree/master/zzz_archived_ombi)
 
 # Donation
 

@@ -1,13 +1,13 @@
-# Ombi Add-on Documentation
+# Ombi App Documentation
 
 Ombi is a media request and user management app for Plex, Emby, and Jellyfin.
 
-This add-on runs Ombi inside Home Assistant with ingress enabled. Direct local access is available on port `3579`.
+This app runs Ombi inside Home Assistant with ingress enabled. Direct local access is available on port `3579`.
 
 ## First Start
 
-1. Start the add-on.
-2. Open Ombi from the add-on page using `Open Web UI`, or from the Home Assistant sidebar.
+1. Start the app.
+2. Open Ombi from the app page using `Open Web UI`, or from the Home Assistant sidebar.
 3. Complete Ombi's setup wizard.
 4. Connect Plex, Emby, or Jellyfin.
 5. Add Sonarr, Radarr, Lidarr, or other automation services from Ombi settings.
@@ -16,15 +16,15 @@ Direct local access is available on port `3579` in addition to Home Assistant in
 
 ## Ingress
 
-Ingress is enabled by default. The add-on sets Ombi's Base URL to the current Home Assistant ingress path during startup.
+Ingress is enabled by default. The app sets Ombi's Base URL to the current Home Assistant ingress path during startup.
 
 In Ombi settings this appears as `/api/hassio_ingress/...`. That value belongs there for Home Assistant sidebar access; do not replace it with your Home Assistant URL or a direct `3579` URL.
 
 ## Storage
 
-Ombi stores its database, settings, and logs in the add-on config folder, which is included in Home Assistant backups.
+Ombi stores its database, settings, and logs in the app config folder, which is included in Home Assistant backups.
 
-If an older add-on install has files in `addons_config/ombi`, the add-on copies those files into the current config folder when the current config folder is empty.
+If an older install has files in `addons_config/ombi`, the app copies those files into the current config folder when the current config folder is empty.
 
 ## Configuration
 
@@ -34,7 +34,7 @@ PGID: 0
 env_vars: []
 ```
 
-`PUID` and `PGID` control ownership for Ombi config files. The default `0:0` is suitable for a standard Home Assistant OS or supervised add-on install.
+`PUID` and `PGID` control ownership for Ombi config files. The default `0:0` is suitable for a standard Home Assistant OS or supervised app install.
 
 `env_vars` can pass extra environment variables into the Ombi container:
 
@@ -46,4 +46,4 @@ env_vars:
 
 ## Updates
 
-This add-on follows the official `Ombi-app/Ombi` prerelease version because the add-on builds from the LinuxServer.io Ombi development image.
+This app follows the official `Ombi-app/Ombi` prerelease version because it builds from the LinuxServer.io Ombi development image.

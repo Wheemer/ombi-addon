@@ -12,7 +12,7 @@ ___
 
 Ombi is a friendly media request tool for Plex, Emby, and Jellyfin.
 
-This Home Assistant add-on runs Ombi with ingress support, so it opens from the Home Assistant sidebar and also exposes Ombi on port `3579` for direct local access.
+This Home Assistant App runs Ombi with ingress support, so it opens from the Home Assistant sidebar and also exposes Ombi on port `3579` for direct local access.
 
 # Features
 
@@ -23,7 +23,7 @@ This Home Assistant add-on runs Ombi with ingress support, so it opens from the 
 * Opens inside Home Assistant through ingress.
 * Exposes direct local access on port `3579`.
 * Includes Ombi icon and logo assets for Home Assistant.
-* Stores Ombi data in Home Assistant's backed-up add-on config storage.
+* Stores Ombi data in Home Assistant's backed-up app config storage.
 
 # Installation
 
@@ -37,18 +37,18 @@ https://github.com/Wheemer/ombi-addon
 
 After adding the repository:
 
-* Install the `Ombi` add-on.
-* Start the add-on.
-* Open Ombi from the Home Assistant sidebar or the add-on page's `Open Web UI` button.
+* Install the `Ombi` app.
+* Start the app.
+* Open Ombi from the Home Assistant sidebar or the app page's `Open Web UI` button.
 * Direct local access is available on port `3579`.
 
 # First Setup
 
 Use Ombi's setup wizard to connect Plex, Emby, or Jellyfin first. Then add Sonarr, Radarr, Lidarr, or your other request automation tools from Ombi's settings.
 
-When ingress is enabled, the add-on sets Ombi's Base URL to Home Assistant's ingress path. In Ombi settings this looks like `/api/hassio_ingress/...`; leave it that way for sidebar access. The generic Ombi reverse-proxy instructions do not apply to Home Assistant ingress.
+When ingress is enabled, the app sets Ombi's Base URL to Home Assistant's ingress path. In Ombi settings this looks like `/api/hassio_ingress/...`; leave it that way for sidebar access. The generic Ombi reverse-proxy instructions do not apply to Home Assistant ingress.
 
-Ombi data is stored in the add-on's own backed-up config folder. If an older install has data in `addons_config/ombi`, the add-on copies it into the new storage location when `/config` is empty.
+Ombi data is stored in the app's own backed-up config folder. If an older install has data in `addons_config/ombi`, the app copies it into the new storage location when `/config` is empty.
 
 # Configuration
 
@@ -68,7 +68,7 @@ env_vars: []
 
 # Updates
 
-Auto-update follows `Ombi-app/Ombi` prereleases because this add-on builds from the LinuxServer.io development image.
+Auto-update follows `Ombi-app/Ombi` prereleases because this app builds from the LinuxServer.io development image.
 
 # Links
 
@@ -76,4 +76,4 @@ Auto-update follows `Ombi-app/Ombi` prereleases because this add-on builds from 
 * [Ombi website](https://ombi.io/)
 * [Ombi docs](https://docs.ombi.app/)
 * [LinuxServer Ombi image](https://github.com/linuxserver/docker-ombi)
-* [Original archived add-on source](https://github.com/alexbelgium/hassio-addons/tree/master/zzz_archived_ombi)
+* [Original archived app source](https://github.com/alexbelgium/hassio-addons/tree/master/zzz_archived_ombi)

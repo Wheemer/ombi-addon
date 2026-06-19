@@ -6,29 +6,29 @@
 - Added a scheduled Ombi-only updater workflow.
 - Switched Home Assistant to the generic multi-arch image `ghcr.io/wheemer/ombi-addon`.
 - Clarified the docs for Ombi's Base URL when running through Home Assistant ingress.
-- Removed the internal ingress Base URL toggle from the user-facing add-on options.
+- Removed the internal ingress Base URL toggle from the user-facing app options.
 - Fixed direct port access so published port `3579` is not blocked by the ingress proxy.
 - Switched README branding to repo-hosted images and added a GitHub social preview image for forum link previews.
-- Moved Ombi data to Home Assistant's backed-up add-on config storage and added a legacy config copy path.
+- Moved Ombi data to Home Assistant's backed-up app config storage and added a legacy config copy path.
 - Removed the broken upstream preview screenshot from the README files.
 
 ## 4.55.2-6 (2026-06-19)
 
-- Restructured the fork as a normal single-add-on repository with Ombi at `ombi/`.
+- Restructured the fork as a normal single-app repository with Ombi at `ombi/`.
 - Added Home Assistant ingress support by setting Ombi's `BASE_URL` from the Supervisor ingress path.
 - Published images under `ghcr.io/wheemer/ombi-addon`.
 - Restored Ombi `icon.png` and `logo.png` so Home Assistant shows the right branding.
 - Removed broad device passthrough and the old custom AppArmor profile.
 - Removed obsolete/deprecated warnings from the active fork metadata.
-- Trimmed the build workflow and template scripts to the pieces this add-on actually uses.
+- Trimmed the build workflow and template scripts to the pieces this app actually uses.
 - Rewrote README and funding links for the fork.
 
 ## 4.55.2-archived (2026-02-18)
 
-- Upstream add-on was archived in `alexbelgium/hassio-addons`.
+- Upstream app was archived in `alexbelgium/hassio-addons`.
 - Users were directed to migrate to Seerr.
 - Automated upstream updates were paused.
 
 ## Earlier Upstream History
 
-Older versions followed `linuxserver/docker-ombi` updates in the original upstream add-on repository.
+Older versions followed `linuxserver/docker-ombi` updates in the original upstream app repository.
