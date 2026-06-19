@@ -1,0 +1,10 @@
+{
+  "github_beta": true,
+  "last_update": "2026-06-19",
+  "repository": "Wheemer/ombi-addon",
+  "slug": "ombi",
+  "source": "github",
+  "upstream_repo": "Ombi-app/Ombi",
+  "upstream_version": "4.60.6",
+  "paused": false
+}
