@@ -2,7 +2,7 @@
 # 1 Build Image #
 #################
 
-ARG BUILD_FROM
+ARG BUILD_FROM=lscr.io/linuxserver/ombi:amd64-development
 ARG BUILD_VERSION
 FROM ${BUILD_FROM}
 
@@ -87,7 +87,7 @@ LABEL \
     org.opencontainers.image.licenses="MIT" \
     org.opencontainers.image.url="https://github.com/Wheemer/ombi-addon" \
     org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
-    org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
+    org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/master/README.md" \
     org.opencontainers.image.created=${BUILD_DATE} \
     org.opencontainers.image.revision=${BUILD_REF} \
     org.opencontainers.image.version=${BUILD_VERSION}

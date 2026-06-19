@@ -4,12 +4,14 @@
 
 - Updated Ombi upstream version to `4.60.6`.
 - Added a scheduled Ombi-only updater workflow.
+- Switched Home Assistant to the generic multi-arch image `ghcr.io/wheemer/ombi-addon`.
+- Removed the broken upstream preview screenshot from the README files.
 
 ## 4.55.2-6 (2026-06-19)
 
 - Restructured the fork as a normal single-add-on repository with Ombi at `ombi/`.
 - Added Home Assistant ingress support by setting Ombi's `BASE_URL` from the Supervisor ingress path.
-- Published images under `ghcr.io/wheemer/ombi-addon-{arch}`.
+- Published images under `ghcr.io/wheemer/ombi-addon`.
 - Restored Ombi `icon.png` and `logo.png` so Home Assistant shows the right branding.
 - Removed broad device passthrough and the old custom AppArmor profile.
 - Removed obsolete/deprecated warnings from the active fork metadata.

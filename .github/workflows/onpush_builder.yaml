@@ -18,7 +18,7 @@ on:
       - ".github/workflows/onpush_builder.yaml"
       - ".templates/**"
       - "ombi/**"
-      - "repository.json"
+      - "repository.yaml"
       - "scripts/**"
 
 jobs:
@@ -107,7 +107,6 @@ jobs:
     if: ${{ needs.detect-changed-addons.outputs.changedAddons != '' && needs.detect-changed-addons.outputs.changedAddons != '[]' }}
     needs: [detect-changed-addons, prebuild-sanitize]
     runs-on: ubuntu-latest
-    continue-on-error: true
     strategy:
       matrix:
         addon: ${{ fromJSON(needs.detect-changed-addons.outputs.changedAddons) }}
@@ -232,7 +231,11 @@ jobs:
           build_arch = arch in arch_list
 
           image_raw = str(config.get("image") or "").strip()
-          image = image_raw.replace("{arch}", arch)
+          if "{arch}" in image_raw:
+              image = image_raw.replace("{arch}", arch)
+          else:
+              registry_prefix, image_name = image_raw.rsplit("/", 1)
+              image = f"{registry_prefix}/{arch}-{image_name}"
           version = str(config.get("version") or "").strip()
           name = str(config.get("name") or "").strip()
           description = str(config.get("description") or "").strip()
@@ -320,3 +323,62 @@ jobs:
           container-registry-password: ${{ secrets.GITHUB_TOKEN }}
           labels: ${{ steps.info.outputs.labels }}
           build-args: ${{ steps.info.outputs.build_args }}
+
+  publish_manifest:
+    if: ${{ needs.detect-changed-addons.outputs.changedAddons != '' && needs.detect-changed-addons.outputs.changedAddons != '[]' }}
+    needs: [detect-changed-addons, build]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      matrix:
+        addon: ${{ fromJSON(needs.detect-changed-addons.outputs.changedAddons) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install PyYAML
+        run: python3 -m pip install --disable-pip-version-check pyyaml
+
+      - name: Read manifest metadata
+        id: manifest
+        env:
+          ADDON: ${{ matrix.addon }}
+        run: |
+          set -euo pipefail
+
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          import yaml
+
+          addon_dir = Path(os.environ["ADDON"])
+          config = yaml.safe_load((addon_dir / "config.yaml").read_text(encoding="utf-8"))
+          image = str(config["image"]).strip()
+          if "{arch}" in image:
+              raise SystemExit("Generic image is required to publish a multi-arch manifest")
+
+          registry_prefix, image_name = image.rsplit("/", 1)
+          architectures = config.get("arch") or []
+          version = str(config["version"]).strip()
+
+          with Path(os.environ["GITHUB_OUTPUT"]).open("a", encoding="utf-8") as output:
+              print(f"architectures={json.dumps(architectures)}", file=output)
+              print(f"registry_prefix={registry_prefix}", file=output)
+              print(f"image_name={image_name}", file=output)
+              print(f"version={version}", file=output)
+          PY
+
+      - name: Publish multi-arch manifest
+        uses: home-assistant/builder/actions/publish-multi-arch-manifest@2026.03.2
+        with:
+          architectures: ${{ steps.manifest.outputs.architectures }}
+          registry-prefix: ${{ steps.manifest.outputs.registry_prefix }}
+          image-name: ${{ steps.manifest.outputs.image_name }}
+          image-tags: |
+            ${{ steps.manifest.outputs.version }}
+            latest
+          cosign: "false"
+          container-registry-password: ${{ secrets.GITHUB_TOKEN }}

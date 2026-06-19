@@ -22,10 +22,6 @@ This Home Assistant add-on runs Ombi with ingress support, so it can open from t
 * Keeps direct local access available on port `3579`.
 * Includes Ombi icon and logo assets for Home Assistant.
 
-# Preview
-
-![Ombi preview](https://i.imgur.com/kBXIqer.png)
-
 # Installation
 
 [![Add repository to Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FWheemer%2Fombi-addon)
