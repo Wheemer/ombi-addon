@@ -3,7 +3,7 @@ arch:
   - amd64
 description:
   Self-hosted Plex, Emby, and Jellyfin request and user management system
-image: ghcr.io/wheemer/ombi-addon
+image: ghcr.io/wheemer/ombi-app
 ingress: true
 ingress_port: 3579
 ingress_stream: true
@@ -28,5 +28,5 @@ schema:
   PGID: int
   PUID: int
 slug: ombi
-url: https://github.com/Wheemer/ombi-addon/tree/master/ombi
+url: https://github.com/Wheemer/ombi-app/tree/master/ombi
 version: "4.60.6"

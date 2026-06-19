@@ -44,7 +44,7 @@ def github_json(path: str):
         f"https://api.github.com/{path}",
         headers={
             "Accept": "application/vnd.github+json",
-            "User-Agent": "wheemer-ombi-addon-updater",
+            "User-Agent": "wheemer-ombi-app-updater",
             **({"Authorization": f"Bearer {token}"} if token else {}),
         },
     )
@@ -120,7 +120,7 @@ def main() -> int:
     prepend_changelog(addon_version, latest_upstream)
 
     print(f"Updated Ombi from {current_upstream} to {latest_upstream}")
-    print(f"Add-on version: {addon_version}")
+    print(f"App version: {addon_version}")
     return 0
 
 

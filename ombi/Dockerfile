@@ -82,10 +82,10 @@ LABEL \
     maintainer="Wheemer (https://github.com/Wheemer)" \
     org.opencontainers.image.title="${BUILD_NAME}" \
     org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
-    org.opencontainers.image.vendor="Home Assistant Add-ons" \
+    org.opencontainers.image.vendor="Home Assistant Apps" \
     org.opencontainers.image.authors="Wheemer (https://github.com/Wheemer)" \
     org.opencontainers.image.licenses="MIT" \
-    org.opencontainers.image.url="https://github.com/Wheemer/ombi-addon" \
+    org.opencontainers.image.url="https://github.com/Wheemer/ombi-app" \
     org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
     org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/master/README.md" \
     org.opencontainers.image.created=${BUILD_DATE} \

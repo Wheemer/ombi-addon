@@ -15,7 +15,7 @@ config_files=("$config_dir"/*)
 legacy_files=("$legacy_dir"/*)
 
 if [ "${#config_files[@]}" -eq 0 ] && [ "${#legacy_files[@]}" -gt 0 ]; then
-    bashio::log.info "Copying legacy Ombi config into add-on config storage"
+    bashio::log.info "Copying legacy Ombi config into app config storage"
     cp -a "$legacy_dir/." "$config_dir/"
 fi
 

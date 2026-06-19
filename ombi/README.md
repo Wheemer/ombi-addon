@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Wheemer/ombi-addon/master/ombi/logo.png" alt="Ombi logo" width="128">
+  <img src="https://raw.githubusercontent.com/Wheemer/ombi-app/master/ombi/logo.png" alt="Ombi logo" width="128">
 </p>
 
 ___
 
-[![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2FWheemer%2Fombi-addon%2Fmaster%2Fombi%2Fconfig.yaml)](config.yaml)
-[![Ingress](https://img.shields.io/badge/dynamic/yaml?label=Ingress&query=%24.ingress&url=https%3A%2F%2Fraw.githubusercontent.com%2FWheemer%2Fombi-addon%2Fmaster%2Fombi%2Fconfig.yaml)](config.yaml)
-[![Arch](https://img.shields.io/badge/dynamic/yaml?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2FWheemer%2Fombi-addon%2Fmaster%2Fombi%2Fconfig.yaml)](config.yaml)
+[![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2FWheemer%2Fombi-app%2Fmaster%2Fombi%2Fconfig.yaml)](config.yaml)
+[![Ingress](https://img.shields.io/badge/dynamic/yaml?label=Ingress&query=%24.ingress&url=https%3A%2F%2Fraw.githubusercontent.com%2FWheemer%2Fombi-app%2Fmaster%2Fombi%2Fconfig.yaml)](config.yaml)
+[![Arch](https://img.shields.io/badge/dynamic/yaml?color=success&label=Arch&query=%24.arch&url=https%3A%2F%2Fraw.githubusercontent.com%2FWheemer%2Fombi-app%2Fmaster%2Fombi%2Fconfig.yaml)](config.yaml)
 
 # Welcome
 
@@ -27,12 +27,12 @@ This Home Assistant App runs Ombi with ingress support, so it opens from the Hom
 
 # Installation
 
-[![Add repository to Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FWheemer%2Fombi-addon)
+[![Add repository to Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FWheemer%2Fombi-app)
 
 Manual repository URL:
 
 ```text
-https://github.com/Wheemer/ombi-addon
+https://github.com/Wheemer/ombi-app
 ```
 
 After adding the repository:

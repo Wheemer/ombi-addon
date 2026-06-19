@@ -1,14 +1,14 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Wheemer/ombi-addon/master/ombi/logo.png" alt="Ombi logo" width="128">
+  <img src="https://raw.githubusercontent.com/Wheemer/ombi-app/master/ombi/logo.png" alt="Ombi logo" width="128">
 </p>
 
 ___
 
-[![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2FWheemer%2Fombi-addon%2Fmaster%2Fombi%2Fconfig.yaml)](ombi/config.yaml)
-[![Ingress](https://img.shields.io/badge/dynamic/yaml?label=Ingress&query=%24.ingress&url=https%3A%2F%2Fraw.githubusercontent.com%2FWheemer%2Fombi-addon%2Fmaster%2Fombi%2Fconfig.yaml)](ombi/config.yaml)
-[![Builder](https://github.com/Wheemer/ombi-addon/actions/workflows/onpush_builder.yaml/badge.svg)](https://github.com/Wheemer/ombi-addon/actions/workflows/onpush_builder.yaml)
-[![Update Ombi](https://github.com/Wheemer/ombi-addon/actions/workflows/update_ombi.yaml/badge.svg)](https://github.com/Wheemer/ombi-addon/actions/workflows/update_ombi.yaml)
-[![Add repository to Home Assistant](https://img.shields.io/badge/Add%20repository%20to-Home%20Assistant-41BDF5?logo=home-assistant)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FWheemer%2Fombi-addon)
+[![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2FWheemer%2Fombi-app%2Fmaster%2Fombi%2Fconfig.yaml)](ombi/config.yaml)
+[![Ingress](https://img.shields.io/badge/dynamic/yaml?label=Ingress&query=%24.ingress&url=https%3A%2F%2Fraw.githubusercontent.com%2FWheemer%2Fombi-app%2Fmaster%2Fombi%2Fconfig.yaml)](ombi/config.yaml)
+[![Builder](https://github.com/Wheemer/ombi-app/actions/workflows/onpush_builder.yaml/badge.svg)](https://github.com/Wheemer/ombi-app/actions/workflows/onpush_builder.yaml)
+[![Update Ombi](https://github.com/Wheemer/ombi-app/actions/workflows/update_ombi.yaml/badge.svg)](https://github.com/Wheemer/ombi-app/actions/workflows/update_ombi.yaml)
+[![Add repository to Home Assistant](https://img.shields.io/badge/Add%20repository%20to-Home%20Assistant-41BDF5?logo=home-assistant)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FWheemer%2Fombi-app)
 
 # Welcome
 
@@ -18,9 +18,9 @@ This repository packages Ombi as a Home Assistant App with ingress support. It o
 
 | Service | App |
 |---------|:------:|
-| Build | [![Builder](https://github.com/Wheemer/ombi-addon/actions/workflows/onpush_builder.yaml/badge.svg)](https://github.com/Wheemer/ombi-addon/actions/workflows/onpush_builder.yaml) |
-| Update | [![Update Ombi](https://github.com/Wheemer/ombi-addon/actions/workflows/update_ombi.yaml/badge.svg)](https://github.com/Wheemer/ombi-addon/actions/workflows/update_ombi.yaml) |
-| Image | `ghcr.io/wheemer/ombi-addon` |
+| Build | [![Builder](https://github.com/Wheemer/ombi-app/actions/workflows/onpush_builder.yaml/badge.svg)](https://github.com/Wheemer/ombi-app/actions/workflows/onpush_builder.yaml) |
+| Update | [![Update Ombi](https://github.com/Wheemer/ombi-app/actions/workflows/update_ombi.yaml/badge.svg)](https://github.com/Wheemer/ombi-app/actions/workflows/update_ombi.yaml) |
+| Image | `ghcr.io/wheemer/ombi-app` |
 
 # Feature Requests
 
@@ -30,7 +30,7 @@ For Ombi application features, use the Ombi feature board:
 
 For Home Assistant App issues, use this repository:
 
-[https://github.com/Wheemer/ombi-addon/issues](https://github.com/Wheemer/ombi-addon/issues)
+[https://github.com/Wheemer/ombi-app/issues](https://github.com/Wheemer/ombi-app/issues)
 
 # Features
 
@@ -48,12 +48,12 @@ For Home Assistant App issues, use this repository:
 
 # Installation
 
-[![Add repository to Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FWheemer%2Fombi-addon)
+[![Add repository to Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FWheemer%2Fombi-app)
 
 Manual repository URL:
 
 ```text
-https://github.com/Wheemer/ombi-addon
+https://github.com/Wheemer/ombi-app
 ```
 
 After adding the repository:
@@ -99,9 +99,9 @@ The scheduled update workflow checks `Ombi-app/Ombi` prereleases and bumps the a
 
 Published images:
 
-* `ghcr.io/wheemer/ombi-addon`
-* `ghcr.io/wheemer/amd64-ombi-addon`
-* `ghcr.io/wheemer/aarch64-ombi-addon`
+* `ghcr.io/wheemer/ombi-app`
+* `ghcr.io/wheemer/amd64-ombi-app`
+* `ghcr.io/wheemer/aarch64-ombi-app`
 
 # Social Preview
 
