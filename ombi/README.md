@@ -1,7 +1,5 @@
 # Ombi
 
-![Ombi logo](logo.png)
-
 Ombi is a self-hosted request system for Plex, Emby, and Jellyfin.
 
 This fork keeps the Home Assistant add-on available and adds ingress support, so Ombi can open from the Home Assistant sidebar.
@@ -54,12 +52,6 @@ The add-on builds from the LinuxServer.io Ombi image and publishes forked Home A
 
 - `ghcr.io/wheemer/ombi-amd64`
 - `ghcr.io/wheemer/ombi-aarch64`
-
-## Branding
-
-| Logo | Icon |
-|------|------|
-| ![Ombi logo](logo.png) | ![Ombi icon](icon.png) |
 
 ## Updates
 

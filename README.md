@@ -1,6 +1,4 @@
-# Ombi Add-on
-
-![Ombi logo](ombi/logo.png)
+<h1><img src="ombi/icon.png" alt="" width="32"> Ombi Add-on</h1>
 
 Ombi for Home Assistant, with ingress.
 
@@ -21,12 +19,6 @@ https://github.com/Wheemer/ombi-addon
 ![Version](https://img.shields.io/badge/dynamic/yaml?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2FWheemer%2Fombi-addon%2Fmaster%2Fombi%2Fconfig.yaml)
 ![Ingress](https://img.shields.io/badge/dynamic/yaml?label=Ingress&query=%24.ingress&url=https%3A%2F%2Fraw.githubusercontent.com%2FWheemer%2Fombi-addon%2Fmaster%2Fombi%2Fconfig.yaml)
 ![Builder](https://github.com/Wheemer/ombi-addon/actions/workflows/onpush_builder.yaml/badge.svg)
-
-## Branding
-
-| Logo | Icon |
-|------|------|
-| ![Ombi logo](ombi/logo.png) | ![Ombi icon](ombi/icon.png) |
 
 Images publish to:
 
