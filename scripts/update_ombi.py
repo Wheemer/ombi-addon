@@ -22,7 +22,7 @@ class HomeAssistantDumper(yaml.SafeDumper):
 
 
 def quoted_string(dumper, data):
-    style = '"' if data and re.fullmatch(r"\d+\.\d+\.\d+-\d+", data) else None
+    style = '"' if data and re.fullmatch(r"\d+\.\d+\.\d+", data) else None
     return dumper.represent_scalar("tag:yaml.org,2002:str", data, style=style)
 
 
@@ -70,16 +70,6 @@ def latest_ombi_version(include_prerelease: bool) -> str:
     return max(versions, key=version_key)
 
 
-def fork_revision(current: str, upstream_version: str) -> int:
-    if not current.startswith(f"{upstream_version}-"):
-        return 1
-
-    suffix = current.removeprefix(f"{upstream_version}-")
-    if suffix.isdigit():
-        return int(suffix) + 1
-    return 1
-
-
 def prepend_changelog(addon_version: str, upstream_version: str) -> None:
     today = datetime.now(timezone.utc).date().isoformat()
     existing = CHANGELOG_PATH.read_text(encoding="utf-8")
@@ -109,8 +99,7 @@ def main() -> int:
         return 0
 
     config = yaml.safe_load(CONFIG_PATH.read_text(encoding="utf-8"))
-    current_addon = str(config["version"])
-    addon_version = f"{latest_upstream}-{fork_revision(current_addon, latest_upstream)}"
+    addon_version = latest_upstream
 
     config["version"] = addon_version
     CONFIG_PATH.write_text(

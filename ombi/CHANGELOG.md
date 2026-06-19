@@ -1,6 +1,6 @@
 # Changelog
 
-## 4.60.6-1 (2026-06-19)
+## 4.60.6 (2026-06-19)
 
 - Updated Ombi upstream version to `4.60.6`.
 - Added a scheduled Ombi-only updater workflow.
