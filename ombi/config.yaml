@@ -6,6 +6,7 @@ description:
 image: ghcr.io/wheemer/ombi-addon
 ingress: true
 ingress_port: 3579
+ingress_panel: true
 ingress_stream: true
 init: false
 map:
@@ -18,10 +19,6 @@ options:
   PGID: 0
   PUID: 0
 panel_icon: mdi:movie-search
-ports:
-  3579/tcp: 3579
-ports_description:
-  3579/tcp: Web interface
 schema:
   env_vars:
     - name: match(^[A-Za-z0-9_]+$)

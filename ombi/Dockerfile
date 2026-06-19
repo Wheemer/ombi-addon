@@ -35,7 +35,7 @@ RUN if [ ! -f /bin/sh ] && [ -f /usr/bin/sh ]; then ln -s /usr/bin/sh /bin/sh; f
     if [ ! -f /bin/bash ] && [ -f /usr/bin/bash ]; then ln -s /usr/bin/bash /bin/bash; fi
 
 # Manual apps
-ENV PACKAGES="jq curl"
+ENV PACKAGES="jq curl nginx"
 
 # Automatic apps & bashio
 COPY ha_automatic_packages.sh /ha_automatic_packages.sh

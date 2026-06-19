@@ -12,7 +12,7 @@ ___
 
 Ombi is a friendly media request tool for Plex, Emby, and Jellyfin.
 
-This repository packages Ombi as a Home Assistant add-on with ingress support. It can open from the Home Assistant sidebar, while still keeping direct access on port `3579` available for local network use.
+This repository packages Ombi as a Home Assistant add-on with ingress support. It opens from the Home Assistant sidebar without exposing a separate web port.
 
 | Service | Add-on |
 |---------|:------:|
@@ -37,7 +37,7 @@ For Home Assistant add-on issues, use this repository:
 * Connects to download and library tools such as Sonarr, Radarr, Lidarr, and other supported Ombi integrations.
 * Supports request approval, user management, notifications, and availability tracking through Ombi.
 * Opens inside Home Assistant through ingress.
-* Keeps direct local access available on port `3579`.
+* Keeps Ombi behind Home Assistant instead of exposing a separate host port.
 * Builds for `amd64` and `aarch64`.
 * Uses the LinuxServer.io Ombi development image.
 * Auto-updates from `Ombi-app/Ombi` prereleases to match the development image stream.
@@ -58,14 +58,13 @@ After adding the repository:
 
 * Install the `Ombi` add-on.
 * Start the add-on.
-* Open Ombi from the Home Assistant sidebar.
-* For direct access, open `http://homeassistant.local:3579` or `http://<home-assistant-ip>:3579`.
+* Open Ombi from the Home Assistant sidebar or the add-on page's `Open Web UI` button.
 
 # First Setup
 
 Use Ombi's setup wizard to connect Plex, Emby, or Jellyfin first. After that, add your request automation tools such as Sonarr, Radarr, or Lidarr from Ombi's settings.
 
-When ingress is enabled, the add-on sets Ombi's base URL automatically from Home Assistant. Leave `ingress_disabled` set to `false` unless you want to manage Ombi's base URL yourself for direct access or a separate reverse proxy.
+When ingress is enabled, the add-on sets Ombi's base URL automatically from Home Assistant. Leave `ingress_disabled` set to `false` unless you want to manage Ombi's base URL yourself.
 
 Ombi data is stored in the add-on's own backed-up config folder. If an older install has data in `addons_config/ombi`, the add-on copies it into the new storage location when `/config` is empty.
 
