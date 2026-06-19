@@ -2,11 +2,6 @@
 # shellcheck shell=bash
 set -e
 
-if bashio::config.true "ingress_disabled"; then
-    bashio::log.info "Direct access mode requested; leaving Ombi BASE_URL unchanged"
-    exit 0
-fi
-
 base_url="$(bashio::addon.ingress_entry)"
 
 if [ -z "$base_url" ]; then

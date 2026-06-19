@@ -16,9 +16,9 @@ Direct local access is available on port `3579` in addition to Home Assistant in
 
 ## Ingress
 
-Ingress is enabled by default. The add-on sets Ombi's base URL to the current Home Assistant ingress path during startup.
+Ingress is enabled by default. The add-on sets Ombi's Base URL to the current Home Assistant ingress path during startup.
 
-Set `ingress_disabled` to `true` only if you want to manage Ombi's base URL yourself, such as for a separate reverse proxy.
+In Ombi settings this appears as `/api/hassio_ingress/...`. That value belongs there for Home Assistant sidebar access; do not replace it with your Home Assistant URL or a direct `3579` URL.
 
 ## Storage
 
@@ -31,7 +31,6 @@ If an older add-on install has files in `addons_config/ombi`, the add-on copies 
 ```yaml
 PUID: 0
 PGID: 0
-ingress_disabled: false
 env_vars: []
 ```
 

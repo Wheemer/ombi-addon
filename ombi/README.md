@@ -44,7 +44,7 @@ After adding the repository:
 
 Use Ombi's setup wizard to connect Plex, Emby, or Jellyfin first. Then add Sonarr, Radarr, Lidarr, or your other request automation tools from Ombi's settings.
 
-When ingress is enabled, the add-on sets Ombi's base URL automatically from Home Assistant. Leave `ingress_disabled` set to `false` unless you want to manage Ombi's base URL yourself.
+When ingress is enabled, the add-on sets Ombi's Base URL to Home Assistant's ingress path. In Ombi settings this looks like `/api/hassio_ingress/...`; leave it that way for sidebar access. The generic Ombi reverse-proxy instructions do not apply to Home Assistant ingress.
 
 Ombi data is stored in the add-on's own backed-up config folder. If an older install has data in `addons_config/ombi`, the add-on copies it into the new storage location when `/config` is empty.
 
@@ -54,7 +54,6 @@ Ombi data is stored in the add-on's own backed-up config folder. If an older ins
 |--------|:-------:|-------------|
 | `PUID` | `0` | User ID used for Ombi files |
 | `PGID` | `0` | Group ID used for Ombi files |
-| `ingress_disabled` | `false` | Stops the add-on from setting Ombi's ingress base URL |
 | `env_vars` | `[]` | Extra environment variables passed to Ombi |
 
 Example:
@@ -62,7 +61,6 @@ Example:
 ```yaml
 PUID: 1000
 PGID: 1000
-ingress_disabled: false
 env_vars: []
 ```
 
@@ -76,4 +74,4 @@ Auto-update follows `Ombi-app/Ombi` prereleases because this add-on builds from 
 * [Ombi website](https://ombi.io/)
 * [Ombi docs](https://docs.ombi.app/)
 * [LinuxServer Ombi image](https://github.com/linuxserver/docker-ombi)
-* [Original archived add-on source](https://github.com/alexbelgium/hassio-addons/tree/master/ombi)
+* [Original archived add-on source](https://github.com/alexbelgium/hassio-addons/tree/master/zzz_archived_ombi)
