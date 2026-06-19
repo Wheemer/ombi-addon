@@ -6,6 +6,11 @@ cat > /tmp/ombi-ingress-nginx.conf <<'NGINX'
 events {}
 
 http {
+    map $http_x_forwarded_proto $ombi_forwarded_proto {
+        default $http_x_forwarded_proto;
+        "" $scheme;
+    }
+
     server {
         listen 3579 default_server;
 
@@ -22,7 +27,8 @@ http {
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto $scheme;
+            proxy_set_header X-Forwarded-Proto $ombi_forwarded_proto;
+            proxy_set_header X-Forwarded-Host $http_x_forwarded_host;
             proxy_set_header X-Forwarded-Prefix $http_x_ingress_path;
             proxy_set_header X-Ingress-Path $http_x_ingress_path;
             proxy_set_header Upgrade $http_upgrade;

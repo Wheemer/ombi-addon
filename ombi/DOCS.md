@@ -2,7 +2,7 @@
 
 Ombi is a media request and user management app for Plex, Emby, and Jellyfin.
 
-This add-on runs Ombi inside Home Assistant with ingress enabled. Direct local access is available only when port `3579` is enabled in the add-on Network settings.
+This add-on runs Ombi inside Home Assistant with ingress enabled. Direct local access is available on port `3579`.
 
 ## First Start
 
@@ -12,7 +12,7 @@ This add-on runs Ombi inside Home Assistant with ingress enabled. Direct local a
 4. Connect Plex, Emby, or Jellyfin.
 5. Add Sonarr, Radarr, Lidarr, or other automation services from Ombi settings.
 
-Direct local access is optional. Enable port `3579` in the add-on Network settings only if you want Ombi reachable outside Home Assistant ingress.
+Direct local access is available on port `3579` in addition to Home Assistant ingress.
 
 ## Ingress
 

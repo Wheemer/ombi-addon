@@ -10,7 +10,7 @@ ___
 
 Ombi is a friendly media request tool for Plex, Emby, and Jellyfin.
 
-This Home Assistant add-on runs Ombi with ingress support, so it opens from the Home Assistant sidebar by default, with optional direct port access available in the add-on Network settings.
+This Home Assistant add-on runs Ombi with ingress support, so it opens from the Home Assistant sidebar and also exposes Ombi on port `3579` for direct local access.
 
 # Features
 
@@ -19,8 +19,7 @@ This Home Assistant add-on runs Ombi with ingress support, so it opens from the 
 * Connects to request automation tools such as Sonarr, Radarr, and Lidarr.
 * Supports approvals, user management, notifications, and availability tracking through Ombi.
 * Opens inside Home Assistant through ingress.
-* Keeps Ombi behind Home Assistant by default.
-* Lets users enable optional direct local access from the add-on Network settings.
+* Exposes direct local access on port `3579`.
 * Includes Ombi icon and logo assets for Home Assistant.
 * Stores Ombi data in Home Assistant's backed-up add-on config storage.
 
@@ -39,7 +38,7 @@ After adding the repository:
 * Install the `Ombi` add-on.
 * Start the add-on.
 * Open Ombi from the Home Assistant sidebar or the add-on page's `Open Web UI` button.
-* Optional: enable port `3579` in the add-on Network settings for direct local access.
+* Direct local access is available on port `3579`.
 
 # First Setup
 
