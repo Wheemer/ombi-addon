@@ -12,6 +12,7 @@
 - Moved Ombi data to Home Assistant's backed-up app config storage and added a legacy config copy path.
 - Fixed legacy Ombi migration so Ombi App imports existing `addons_config/ombi` data whenever the new app config does not already contain Ombi databases.
 - Removed the old legacy config folder after a successful migration when Home Assistant permits it.
+- Mounted Home Assistant config read/write so the legacy config folder can be removed after migration.
 - Removed the broken upstream preview screenshot from the README files.
 
 ## 4.55.2-6 (2026-06-19)
