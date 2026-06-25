@@ -13,6 +13,7 @@
 - Fixed legacy Ombi migration so Ombi App imports existing `addons_config/ombi` data whenever the new app config does not already contain Ombi databases.
 - Removed the old legacy config folder after a successful migration when Home Assistant permits it.
 - Mounted Home Assistant config read/write so the legacy config folder can be removed after migration.
+- Added explicit migration docs for users moving from the old alexbelgium Ombi add-on, including the instruction not to delete old add-on data before Ombi App imports it.
 - Removed the broken upstream preview screenshot from the README files.
 
 ## 4.55.2-6 (2026-06-19)

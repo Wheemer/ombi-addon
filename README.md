@@ -63,6 +63,26 @@ After adding the repository:
 * Open Ombi from the Home Assistant sidebar or the app page's `Open Web UI` button.
 * Direct local access is available on port `3579`.
 
+# Migrating From The Old Ombi Add-on
+
+If you already used the older alexbelgium Ombi add-on, keep its data until Ombi App has imported it.
+
+Recommended migration:
+
+* Stop the old Ombi add-on.
+* Add this repository to Home Assistant.
+* Install and start `Ombi` from this repository.
+* Ombi App automatically imports the old `addons_config/ombi` data into its own backed-up app config folder when the new config is empty.
+* After Ombi App starts and your settings are present, uninstall the old Ombi add-on.
+
+Alternative migration:
+
+* Stop and uninstall the old Ombi add-on first.
+* If Home Assistant asks whether to delete the add-on data, do not delete it.
+* Install and start `Ombi` from this repository.
+
+If the old add-on data is deleted before Ombi App starts, there may be nothing left to import.
+
 # First Setup
 
 Use Ombi's setup wizard to connect Plex, Emby, or Jellyfin first. After that, add your request automation tools such as Sonarr, Radarr, or Lidarr from Ombi's settings.
