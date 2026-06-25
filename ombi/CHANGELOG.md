@@ -1,10 +1,5 @@
 # Changelog
 
-## 4.60.6-1
-
-- Fixed legacy Ombi migration so Ombi App imports existing `addons_config/ombi` data whenever the new app config does not already contain Ombi databases.
-- Removed the old legacy config folder after a successful migration when Home Assistant permits it.
-
 ## 4.60.6 (2026-06-19)
 
 - Updated Ombi upstream version to `4.60.6`.
@@ -15,6 +10,8 @@
 - Fixed direct port access so published port `3579` is not blocked by the ingress proxy.
 - Switched README branding to repo-hosted images and added a GitHub social preview image for forum link previews.
 - Moved Ombi data to Home Assistant's backed-up app config storage and added a legacy config copy path.
+- Fixed legacy Ombi migration so Ombi App imports existing `addons_config/ombi` data whenever the new app config does not already contain Ombi databases.
+- Removed the old legacy config folder after a successful migration when Home Assistant permits it.
 - Removed the broken upstream preview screenshot from the README files.
 
 ## 4.55.2-6 (2026-06-19)
