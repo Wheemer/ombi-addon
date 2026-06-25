@@ -26,6 +26,26 @@ Ombi stores its database, settings, and logs in the app config folder, which is 
 
 If an older install has files in `addons_config/ombi`, the app copies those files into the current config folder when the current config folder is empty.
 
+## Migrating From The Old Ombi Add-on
+
+If you already used the older alexbelgium Ombi add-on, keep its data until Ombi App has imported it.
+
+Recommended migration:
+
+1. Stop the old Ombi add-on.
+2. Add this repository to Home Assistant.
+3. Install and start `Ombi` from this repository.
+4. Confirm your Ombi settings are present.
+5. Uninstall the old Ombi add-on.
+
+Alternative migration:
+
+1. Stop and uninstall the old Ombi add-on first.
+2. If Home Assistant asks whether to delete the add-on data, do not delete it.
+3. Install and start `Ombi` from this repository.
+
+If the old add-on data is deleted before Ombi App starts, there may be nothing left to import.
+
 ## Configuration
 
 ```yaml
