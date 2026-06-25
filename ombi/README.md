@@ -37,9 +37,9 @@ https://github.com/Wheemer/ombi-app
 
 After adding the repository:
 
-* Install the `Ombi` app.
+* Install `Ombi App`.
 * Start the app.
-* Open Ombi from the Home Assistant sidebar or the app page's `Open Web UI` button.
+* Open Ombi App from the Home Assistant sidebar or the app page's `Open Web UI` button.
 * Direct local access is available on port `3579`.
 
 # Migrating From The Old Ombi Add-on
@@ -50,7 +50,7 @@ Recommended migration:
 
 * Stop the old Ombi add-on.
 * Add this repository to Home Assistant.
-* Install and start `Ombi` from this repository.
+* Install and start `Ombi App` from this repository.
 * Ombi App automatically imports the old `addons_config/ombi` data into its own backed-up app config folder when the new config is empty.
 * After Ombi App starts and your settings are present, uninstall the old Ombi add-on.
 
@@ -58,7 +58,7 @@ Alternative migration:
 
 * Stop and uninstall the old Ombi add-on first.
 * If Home Assistant asks whether to delete the add-on data, do not delete it.
-* Install and start `Ombi` from this repository.
+* Install and start `Ombi App` from this repository.
 
 If the old add-on data is deleted before Ombi App starts, there may be nothing left to import.
 

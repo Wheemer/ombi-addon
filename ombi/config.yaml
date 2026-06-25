@@ -11,7 +11,7 @@ init: false
 map:
   - addon_config:rw
   - homeassistant_config:rw
-name: Ombi
+name: Ombi App
 options:
   env_vars: []
   PGID: 0

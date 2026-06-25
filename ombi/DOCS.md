@@ -7,7 +7,7 @@ This app runs Ombi inside Home Assistant with ingress enabled. Direct local acce
 ## First Start
 
 1. Start the app.
-2. Open Ombi from the app page using `Open Web UI`, or from the Home Assistant sidebar.
+2. Open Ombi App from the app page using `Open Web UI`, or from the Home Assistant sidebar.
 3. Complete Ombi's setup wizard.
 4. Connect Plex, Emby, or Jellyfin.
 5. Add Sonarr, Radarr, Lidarr, or other automation services from Ombi settings.
@@ -34,7 +34,7 @@ Recommended migration:
 
 1. Stop the old Ombi add-on.
 2. Add this repository to Home Assistant.
-3. Install and start `Ombi` from this repository.
+3. Install and start `Ombi App` from this repository.
 4. Confirm your Ombi settings are present.
 5. Uninstall the old Ombi add-on.
 
@@ -42,7 +42,7 @@ Alternative migration:
 
 1. Stop and uninstall the old Ombi add-on first.
 2. If Home Assistant asks whether to delete the add-on data, do not delete it.
-3. Install and start `Ombi` from this repository.
+3. Install and start `Ombi App` from this repository.
 
 If the old add-on data is deleted before Ombi App starts, there may be nothing left to import.
 
