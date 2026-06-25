@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.60.6-1
+
+- Fixed legacy Ombi migration so Ombi App imports existing `addons_config/ombi` data whenever the new app config does not already contain Ombi databases.
+- Removed the old legacy config folder after a successful migration when Home Assistant permits it.
+
 ## 4.60.6 (2026-06-19)
 
 - Updated Ombi upstream version to `4.60.6`.

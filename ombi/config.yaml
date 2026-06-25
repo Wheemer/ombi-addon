@@ -29,4 +29,4 @@ schema:
   PUID: int
 slug: ombi
 url: https://github.com/Wheemer/ombi-app/tree/master/ombi
-version: "4.60.6"
+version: "4.60.6-1"
